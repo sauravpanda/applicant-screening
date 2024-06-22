@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "applicant-screening"
+version = "0.1.0"
+description = ""
+authors = ["Saurav Panda <sgp65@cornell.edu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.2.2"
+litellm = "^1.40.22"
+kaizen-cloudcode = "^0.2.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
