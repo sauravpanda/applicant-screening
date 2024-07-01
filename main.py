@@ -4,6 +4,7 @@ from litellm import completion
 from prompt import Applicant_prompt
 from jobpost import JOB_POST, CONDITIONS
 from kaizen.helpers.parser import extract_json
+import os
 try:
     from tqdm import tqdm
     use_tqdm = True
@@ -66,7 +67,7 @@ def process_applicant(row, job_post):
     messages = [{"content": prompt, "role": "user"}]
 
     response = completion(
-        model="anyscale/mistralai/Mixtral-8x22B-Instruct-v0.1", messages=messages
+        model=os.environ.get("model", "anyscale/mistralai/Mixtral-8x22B-Instruct-v0.1"), messages=messages
     )
 
     content = response["choices"][0]["message"]["content"]

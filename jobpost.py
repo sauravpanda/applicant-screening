@@ -1,5 +1,5 @@
 # Change this variable text based on specific evaluation criteria, it would be included in the prompt
-CONDITIONS = "If they dont have github or dont know python, we dont want to hire them."
+CONDITIONS = "If they dont have github or if its set to na or dont know python, we dont want to hire them, say no for interview"
 
 JOB_POST = """
 Hi there! Thanks for showing interest in working with CloudCode AI - We're excited to get to know you better!  
